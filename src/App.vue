@@ -1,30 +1,34 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav class="navbar">
+    <div class="navbar-wrapper">
+      <h1>workload-counter</h1>
+    </div>
   </nav>
   <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.navbar {
+  height: 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-nav {
-  padding: 30px;
+.navbar-wrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.navbar-wrapper > h1 {
+  font-size: 1rem;
+  margin: 0;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.resized {
+  width: 80%;
+  margin: auto;
 }
 </style>
