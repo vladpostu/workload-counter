@@ -2,59 +2,58 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    totalHours: 0,
-    mondayHours: 0,
-    tuesdayHours: 0,
-    wednesdayHours: 0,
-    thursdayHours: 0,
-    fridayHours: 0,
-    saturdayHours: 0,
-    sundayHours: 0,
+    monday: {},
+    tuesday: {},
+    wednesday: {},
+    thursday: {},
+    friday: {},
+    saturday: {},
+    sunday: {},
   },
   getters: {
-    mondayHours(state) {
-      return state.mondayHours;
+    monday(state) {
+      return state.monday;
     },
-    tuesdayHours(state) {
-      return state.tuesdayHours;
+    tuesday(state) {
+      return state.tuesday;
     },
-    wednesdayHours(state) {
-      return state.wednesdayHours;
+    wednesday(state) {
+      return state.wednesday;
     },
-    thursdayHours(state) {
-      return state.thursdayHours;
+    thursday(state) {
+      return state.thursday;
     },
-    fridayHours(state) {
-      return state.fridayHours;
+    friday(state) {
+      return state.friday;
     },
-    saturdayHours(state) {
-      return state.saturdayHours;
+    saturday(state) {
+      return state.saturday;
     },
-    sundayHours(state) {
-      return state.sundayHours;
+    sunday(state) {
+      return state.sunday;
     },
   },
   mutations: {
-    updateMondayHours(state, hours) {
-      state.mondayHours = hours;
+    updateMonday(state, day) {
+      state.monday = day;
     },
-    updateTuesdayHours(state, hours) {
-      state.tuesdayHours = hours;
+    updateTuesday(state, day) {
+      state.tuesday = day;
     },
-    updateWednesdayHours(state, hours) {
-      state.wednesdayHours = hours;
+    updateWednesday(state, day) {
+      state.wednesday = day;
     },
-    updateThursdayHours(state, hours) {
-      state.thursdayHours = hours;
+    updateThursday(state, day) {
+      state.thursday = day;
     },
-    updateFridayHours(state, hours) {
-      state.fridayHours = hours;
+    updateFriday(state, day) {
+      state.friday = day;
     },
-    updateSaturdayHours(state, hours) {
-      state.saturdayHours = hours;
+    updateSaturday(state, day) {
+      state.saturday = day;
     },
-    updateSundayHours(state, hours) {
-      state.sundayHours = hours;
+    updateSunday(state, day) {
+      state.sunday = day;
     },
   },
   actions: {},

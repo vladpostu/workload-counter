@@ -36,15 +36,15 @@ export default {
   },
   methods: {
     calculateTotalHours() {
-      console.log(this.totalHours);
+      console.log(this.$store.getters.monday);
       this.totalHours =
-        this.$store.getters.mondayHours +
-        this.$store.getters.tuesdayHours +
-        this.$store.getters.wednesdayHours +
-        this.$store.getters.thursdayHours +
-        this.$store.getters.fridayHours +
-        this.$store.getters.saturdayHours +
-        this.$store.getters.sundayHours;
+        this.$store.getters.monday.hours +
+        this.$store.getters.tuesday.hours +
+        this.$store.getters.wednesday.hours +
+        this.$store.getters.thursday.hours +
+        this.$store.getters.friday.hours +
+        this.$store.getters.saturday.hours +
+        this.$store.getters.sunday.hours;
     },
   },
 };
@@ -54,7 +54,7 @@ export default {
 .days {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 }
 </style>
