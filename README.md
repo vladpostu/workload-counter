@@ -30,4 +30,4 @@ ex. [Vlad](https://github.com/vladpostu)
 
 ## License
 
-This project is licensed under the GNU 3 License - see the LICENSE.md file for details
+This project is licensed under the GPL 3 License - see the LICENSE.md file for details
