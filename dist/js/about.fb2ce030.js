@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkworkload_counter"]=self["webpackChunkworkload_counter"]||[]).push([[443],{7381:function(n,r,u){u.r(r),u.d(r,{default:function(){return d}});var t=u(3396);const a={class:"about"},e=(0,t._)("h1",null,"This is an about page",-1),o=[e];function c(n,r){return(0,t.wg)(),(0,t.iD)("div",a,o)}var s=u(89);const i={},l=(0,s.Z)(i,[["render",c]]);var d=l}}]);
+//# sourceMappingURL=about.fb2ce030.js.map
