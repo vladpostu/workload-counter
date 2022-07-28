@@ -1,24 +1,33 @@
 # workload-counter
 
-## Project setup
-```
-npm install
-```
+Simple designed web app to calculate how much you have to work, study [...] this week
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Description
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Time counter (hours and minutes) intervals entered.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Getting Started
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Clone the [repo](https://github.com/vladpostu/workload-counter.git)
+- Visit this [link](https://vladpostu.github.io/workload-counter/)
+
+### Dependencies
+
+- Vue
+- VUex
+
+
+## Authors
+
+Contributors names and contact info
+
+ex. Vlad Postu 
+ex. [Vlad](https://github.com/vladpostu)
+
+## Version History
+
+    * Initial Release
+
+## License
+
+This project is licensed under the GNU 3 License - see the LICENSE.md file for details
