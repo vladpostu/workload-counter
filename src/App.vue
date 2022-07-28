@@ -2,6 +2,7 @@
   <nav class="navbar">
     <div class="navbar-wrapper">
       <h1>workload-counter</h1>
+      <a href="https://github.com/vladpostu/workload-counter">GitHub Repo</a>
     </div>
   </nav>
   <router-view />
@@ -11,6 +12,9 @@
 .navbar {
   height: 50px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .navbar-wrapper {
