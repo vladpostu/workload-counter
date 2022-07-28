@@ -2,13 +2,29 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    monday: {},
-    tuesday: {},
-    wednesday: {},
-    thursday: {},
-    friday: {},
-    saturday: {},
-    sunday: {},
+    monday: {
+      title: "Monday",
+      hours: 0,
+      mins: 0,
+    },
+    tuesday: {
+      title: "Tuesday",
+      hours: 0,
+      mins: 0,
+    },
+    wednesday: {
+      title: "Wednesday",
+      hours: 0,
+      mins: 0,
+    },
+    thursday: {
+      title: "Thursday",
+      hours: 0,
+      mins: 0,
+    },
+    friday: { title: "Friday", hours: 0, mins: 0 },
+    saturday: { title: "Saturday", hours: 0, mins: 0 },
+    sunday: { title: "Sunday", hours: 0, mins: 0 },
   },
   getters: {
     monday(state) {

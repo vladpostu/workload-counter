@@ -17,7 +17,9 @@
     >
       Calculate workload
     </button>
-    <div class="fs-3 mt-5 text-center">{{ totalHours }}</div>
+    <div class="fs-3 mt-5 text-center">
+      {{ totalHours }} hour(s) : {{ totalMins }} minute(s)
+    </div>
   </div>
 </template>
 
@@ -32,11 +34,11 @@ export default {
   data() {
     return {
       totalHours: 0,
+      totalMins: 0,
     };
   },
   methods: {
     calculateTotalHours() {
-      console.log(this.$store.getters.monday);
       this.totalHours =
         this.$store.getters.monday.hours +
         this.$store.getters.tuesday.hours +
@@ -45,6 +47,26 @@ export default {
         this.$store.getters.friday.hours +
         this.$store.getters.saturday.hours +
         this.$store.getters.sunday.hours;
+
+      this.totalMins =
+        this.$store.getters.monday.mins +
+        this.$store.getters.tuesday.mins +
+        this.$store.getters.wednesday.mins +
+        this.$store.getters.thursday.mins +
+        this.$store.getters.friday.mins +
+        this.$store.getters.saturday.mins +
+        this.$store.getters.sunday.mins;
+
+      let convertedHours = Math.floor(this.totalMins / 60);
+      console.log(this.totalMins / 60);
+
+      if (this.totalMins > 60) {
+        this.totalHours += convertedHours;
+        this.totalMins = this.totalHours % 60;
+      } else if (this.totalMins == 60) {
+        this.totalHours++;
+        this.totalMins = 0;
+      }
     },
   },
 };

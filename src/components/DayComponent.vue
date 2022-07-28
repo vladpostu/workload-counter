@@ -9,7 +9,6 @@
       >
         <select
           class="input-time hours form-control start-hours"
-          required
           v-model="startHours"
           @change="updateHours"
         >
@@ -41,7 +40,6 @@
         <span class="ms-1">:</span>
         <select
           class="input-time ms-1 form-control"
-          required
           v-model="startMins"
           @change="updateHours"
         >
@@ -133,18 +131,25 @@ export default {
   },
   methods: {
     updateHours() {
-      let hours;
-      let mins;
-      if (this.finishMins < this.startMins) {
-        mins = this.finishMins + 60;
-      } else {
-        mins = this.finishMins - this.startMins;
-      }
+      let hours = 0;
+      let mins = 0;
+
+      this.startHours = parseInt(this.startHours);
+      this.finishHours = parseInt(this.finishHours);
+      this.startMins = parseInt(this.startMins);
+      this.finishMins = parseInt(this.finishMins);
 
       if (this.finishHours < this.startHours) {
-        hours = this.finishHours + 24;
+        hours = this.finishHours - this.startHours + 24;
       } else {
         hours = this.finishHours - this.startHours;
+      }
+
+      if (this.finishMins < this.startMins) {
+        mins = this.finishMins - this.startMins + 60;
+        hours--;
+      } else {
+        mins = this.finishMins - this.startMins;
       }
 
       this.$store.commit("update" + this.$props.title, {
