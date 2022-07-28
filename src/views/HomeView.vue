@@ -80,11 +80,10 @@ export default {
   align-items: center;
 }
 
-@media screen and (max-width: 475px) {
-  .days > * {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+@media screen and (max-width: 1190px) {
+  .days {
+    display: flex;
+    justify-content: center;
   }
 }
 </style>
