@@ -17,7 +17,7 @@
     >
       Calculate workload
     </button>
-    <div class="fs-3 mt-5 text-center">
+    <div class="fs-3 mt-5 text-center pb-4">
       {{ totalHours }} hour(s) : {{ totalMins }} minute(s)
     </div>
   </div>
@@ -78,5 +78,13 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+}
+
+@media screen and (max-width: 475px) {
+  .days > * {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 </style>
