@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="navbar-wrapper">
       <h1>workload-counter</h1>
-      <a href="https://github.com/vladpostu/workload-counter">GitHub Repo</a>
+      <a href="https://github.com/vladpostu/workload-counter" target="blank">GitHub Repo</a>
     </div>
   </nav>
   <router-view />
